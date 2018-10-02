@@ -1,7 +1,57 @@
 html {
-    width: 100%
+    width: 100%;
+    background-color: rgb(18, 132, 207);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#header {
+    margin-top: 1%;
 }
 
 h1 {
-    color: red;
+    color: black;
+    font-size: 42px;
+    text-align: center;
+
+}
+
+#button-display {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+
+}
+.button {
+    background-color: rgba(245, 245, 236, 0.993);
+    color: black;
+    font-size: 18px;
+    border: solid goldenrod;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 1%;
+
+}
+
+#character-search {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+
+.image {
+    height: 350px;
+    width: 350px;
+    border: solid 2px black;
+    margin: 5% 10px 5% 10px;
+}
+
+
+p {
+    align-content: center;
+}
+
+
+.container {
+    width: 25%;
+    float: left;
 }

@@ -16,8 +16,27 @@
     <script src="assets/javascript/app.js"></script>
 </head>
 <body>
+    <div id="header">
+            <h1>Favorite TV Show Characters</h1>
 
-    <h1>Hello, World!</h1>
+            <div id="button-display"></div>
+    </div>
+
+    
+    
+    <form id="character-search">
+            <label for="character-input">Search for your favorite TV character</label>
+            <input type="text" id="character-input">
+      
+            <!-- This button will trigger our AJAX call -->
+            <input id="find-character" class="button" type="submit" value="Character Search">
+          </form>
+
+    <div class="container">
+        <div id="giphy-display"></div>
+    </div>
+
+   
     
 </body>
 </html>
