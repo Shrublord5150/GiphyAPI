@@ -110,21 +110,42 @@ $(document).ready(function(){
 
                 image.attr("src", giphyURL);
 
+                // image.attr("data-still", giphyObject[i].images.original_still.url);
+
+                // image.attr("data-looping", giphyURL);
+
+                // image.attr("date-state", "still");
+
                 giphy.append(image);
 
                 $("#giphy-display").prepend(giphy);
                 
+                pauseGif();
 
              }
         })
         
-
-
     }
     
+// pauseGif = function () {
+
+//     $(".image").on("click", function() {
+        
+//         var state = $(this).attr("data-state");
+      
+//         if (state === "still") {
+//           $(this).attr("src", $(this).attr("data-looping"));
+//           $(this).attr("data-state", "looping");
+//         } else {
+//           $(this).attr("src", $(this).attr("data-still"));
+//           $(this).attr("data-state", "still");
+//         }
+//       });
+// }
     
     displayButtons();
     addNewButton();
+
     console.log(characters);
     $(document).on("click", ".character", displayGiphy);
 })
