@@ -110,11 +110,11 @@ $(document).ready(function(){
 
                 image.attr("src", giphyURL);
 
-                // image.attr("data-still", giphyObject[i].images.original_still.url);
+                image.attr("data-still", giphyObject[i].images.original_still.url);
 
-                // image.attr("data-looping", giphyURL);
+                image.attr("data-looping", giphyObject[i].images.fixed_height.url);
 
-                // image.attr("date-state", "still");
+                image.attr("data-state", "looping");
 
                 giphy.append(image);
 
@@ -127,24 +127,25 @@ $(document).ready(function(){
         
     }
     
-// pauseGif = function () {
+pauseGif = function () {
 
-//     $(".image").on("click", function() {
+    $(".image").on("click", function() {
         
-//         var state = $(this).attr("data-state");
+        var state = $(this).attr("data-state");
       
-//         if (state === "still") {
-//           $(this).attr("src", $(this).attr("data-looping"));
-//           $(this).attr("data-state", "looping");
-//         } else {
-//           $(this).attr("src", $(this).attr("data-still"));
-//           $(this).attr("data-state", "still");
-//         }
-//       });
-// }
+        if (state === "still") {
+          $(this).attr("src", $(this).attr("data-looping"));
+          $(this).attr("data-state", "looping");
+        } else {
+          $(this).attr("src", $(this).attr("data-still"));
+          $(this).attr("data-state", "still");
+        }
+      });
+}
     
     displayButtons();
     addNewButton();
+    
 
     console.log(characters);
     $(document).on("click", ".character", displayGiphy);
